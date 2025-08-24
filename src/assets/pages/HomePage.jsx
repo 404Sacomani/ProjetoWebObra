@@ -10,25 +10,25 @@ function HomePage() {
       type: 'Artigo',
       name: 'Novas noticias',
       conteudo: 'Explore nossos simuladores para praticar cálculos e resolver problemas da engenharia civil. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam similique asperiores fuga tempore magni excepturi perferendi',
-      image: '../../../public/imagens/img_slide_01.png'
+      image: '../../../public/imagens/imagens/imageEnsino.jpeg'
     },
     {
       type: 'Artigo',
       name: 'Novas noticias',
       conteudo: 'Explore nossos simuladores para praticar cálculos e resolver problemas da engenharia civil. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam similique asperiores fuga tempore magni excepturi perferendi',
-      image: '../../../public/imagens/img_slide_01.png'
+      image: '../../../public/imagens/imagens/imageEnsino.jpeg'
     },
     {
       type: 'Artigo',
       name: 'Novas noticias',
       conteudo: 'Explore nossos simuladores para praticar cálculos e resolver problemas da engenharia civil. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam similique asperiores fuga tempore magni excepturi perferendi',
-      image: '../../../public/imagens/img_slide_01.png'
+      image: '../../../public/imagens/imagens/imageEnsino.jpeg'
     },
     {
       type: 'Artigo',
       name: 'Novas noticias',
       conteudo: 'Explore nossos simuladores para praticar cálculos e resolver problemas da engenharia civil. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam similique asperiores fuga tempore magni excepturi perferendi',
-      image: '../../../public/imagens/img_slide_01.png'
+      image: '../../../public/imagens/imagens/imageEnsino.jpeg'
     },
   ]
 
@@ -108,7 +108,7 @@ function HomePage() {
         <div className='w-[75%] grid grid-cols-2'>
           <div className='h-200 col-span-1'>
             <CardHome
-              name='Ultima noticia' image='../../../public/imagens/img_slide_02.png' conteudo='aqui e um conteudo muito importante para ler' size='large'
+              name='Ultima noticia' image='../../../public/imagens/imagens/imageEnsino.jpeg' conteudo='aqui e um conteudo muito importante para ler' size='large'
             ></CardHome>
           </div>
           <div className='grid grid-cols-2 grid-rows-2 ml-5'>

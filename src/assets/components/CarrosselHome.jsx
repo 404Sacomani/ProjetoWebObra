@@ -7,17 +7,17 @@ import setaD from '../../../public/imagens/seta_direita64.png';
 // 1. Defina os dados dos seus slides em um array
 const slides = [
     {
-        image: '../../../public/imagens/img_slide_02.png',
+        image: '../../../public/imagens/imageEnsino.jpeg',
         title: 'Artigos da Engenharia',
         text: 'Transformamos suas ideias em realidade com design e tecnologia de ponta. Transformamos suas ideias em realidade com design e tecnologia de ponta.',
     },
     {
-        image: '../../../public/imagens/img_slide_02.png',
+        image: '../../../public/imagens/imageEnsino.jpeg',
         title: 'Construção Sustentável',
         text: 'Compromisso com o futuro, utilizando materiais e processos ecológicos.',
     },
     {
-        image: '../../../public/imagens/img_slide_02.png',
+        image: '../../../public/imagens/imageEnsino.jpeg',
         title: 'Acabamento de Qualidade',
         text: 'Detalhes que fazem a diferença, garantindo a excelência em cada metro quadrado.',
     },

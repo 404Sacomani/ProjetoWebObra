@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
 
-// Importe suas imagens de seta aqui
 import setaE from '../../../public/imagens/seta_esquerda64.png';
 import setaD from '../../../public/imagens/seta_direita64.png';
+import img1 from '../../../public/imagens/imageEnsino.jpeg';
 
-// 1. Defina os dados dos seus slides em um array
 const slides = [
     {
-        image: '../../../public/imagens/imageEnsino.jpeg',
+        image: {img1},
         title: 'Artigos da Engenharia',
         text: 'Transformamos suas ideias em realidade com design e tecnologia de ponta. Transformamos suas ideias em realidade com design e tecnologia de ponta.',
     },

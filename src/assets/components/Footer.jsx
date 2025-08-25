@@ -18,7 +18,7 @@ function Footer() {
 
             <div className='w-[500px] space-y-6 max-lg:w-full max-lg:my-5'>
                 <h1 className='text-2xl text-white font-semibold text-center'>Informações</h1>
-                <p className='text-white text-2sm font-regular text-center'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo saepe natus sit! Fugit libero,
+                <p className='text-white text-2sm font-regular text-center max-md:mx-5'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo saepe natus sit! Fugit libero,
                     fugiat deserunt voluptatibus magni sed odio impedit esse veritatis at eius, ex adipisci
                     recusandae aliquid debitis.</p>
             </div>

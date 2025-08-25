@@ -1,32 +1,35 @@
-import React, { useState, useEffect } from 'react';
-
+import React, { useState, useEffect, useRef } from 'react';
+import { NavLink } from 'react-router-dom';
 import setaE from '../../../public/imagens/seta_esquerda64.png';
 import setaD from '../../../public/imagens/seta_direita64.png';
-import img1 from '../../../public/imagens/imageEnsino.jpeg';
+import img1 from '../../../public/imagens/img_cr_01.png';
 
 // 1. Defina os dados dos seus slides em um array
 const slides = [
     {
-        image: '../../../public/imagens/imageEnsino.jpeg',
+        image: '../../../public/imagens/img_cr_15.jpeg',
         title: 'Artigos da Engenharia',
         text: 'Transformamos suas ideias em realidade com design e tecnologia de ponta. Transformamos suas ideias em realidade com design e tecnologia de ponta.',
+        button: '/about',
     },
     {
-        image: '../../../public/imagens/imageEnsino.jpeg',
-        title: 'Construção Sustentável',
-        text: 'Compromisso com o futuro, utilizando materiais e processos ecológicos.',
+        image: '../../../public/imagens/img_cr_17.png',
+        title: 'Explore Nossos Simuladores',
+        text: 'Descubra ferramentas interativas para calcular e resolver problemas da engenharia civil. Aprenda na prática e amplie seus conhecimentos.',
+        button: '/simuladores',
     },
     {
-        image: '../../../public/imagens/imageEnsino.jpeg',
+        image: '../../../public/imagens/img_cr_14.jpeg',
         title: 'Acabamento de Qualidade',
         text: 'Detalhes que fazem a diferença, garantindo a excelência em cada metro quadrado.',
+        button: '/service',
     },
 ];
 
-function Carousel() {
+function CarrosselHome() {
 
     const [currentIndex, setCurrentIndex] = useState(0);
-
+    
     const goToPrevious = () => {
         const isFirstSlide = currentIndex === 0;
         const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
@@ -63,7 +66,8 @@ function Carousel() {
                 key={currentIndex}
                 className="h-[92svh] ml-30 flex flex-col p-4 animate-fade-in-up space-y-6 max-lg:ml-5 max-lg:p-1"
             >
-                <h1 className="mt-60 text-3xl md:text-6xl lg:text-7xl font-bold drop-shadow-lg text-amber-400 max-lg:mt-10">
+                <h1 className="mt-60 text-3xl md:text-6xl lg:text-7xl font-extrabold drop-shadow-lg text-amber-400 max-lg:mt-10
+                 uppercase">
                     {slides[currentIndex].title}
                 </h1>
                 <p className="mt-4 max-w-2xl text-lg md:text-2lg lg:text-xl drop-shadow-md text-white max-lg:mt-2">
@@ -75,10 +79,11 @@ function Carousel() {
                     <span className='absolute inset-0 bg-amber-400 translate-x-[-100%] 
                     group-hover:translate-x-0 rounded-full transition-transform duration-400'></span>
 
-                    <span className='relative z-10 text-amber-400  text-2xl font-semibold
-                    group-hover:text-white transition-colors duration-400 max-lg:text-xl'>
+                    <NavLink className='relative z-10 text-amber-400  text-3xl font-semibold
+                    group-hover:text-white transition-colors duration-400 max-lg:text-xl'
+                    to={slides[currentIndex].button}>
                         Acessar Conteudos
-                    </span>
+                    </NavLink>
                 </button>
             </div>
 
@@ -104,4 +109,4 @@ function Carousel() {
     );
 }
 
-export default Carousel;
+export default CarrosselHome;

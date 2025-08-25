@@ -12,7 +12,7 @@ function NavBar() {
         { name: 'Home', path: "/" },
         { name: 'Blog', path: "/service" },
         { name: 'Artigos', path: "/about" },
-        { name: 'Simuladores', path: "/contact" }
+        { name: 'Simuladores', path: "/simuladores" }
     ];
 
     // Função para fechar o menu ao clicar em um link no modo mobile

@@ -28,13 +28,13 @@ function CardHome({ name, conteudo, image, size = 'default' }) {
 
       <div className="relative z-10 flex flex-col h-full p-6 text-white">
         <header>
-          <h1 className="text-amber-400 font-bold text-2xl md:text-4xl lg:text-2xl uppercase tracking-wider drop-shadow-md max-lg:text-center">
+          <h1 className="text-amber-400 font-extrabold text-2xl md:text-4xl lg:text-2xl uppercase tracking-wider drop-shadow-md max-lg:text-center">
             {name}
           </h1>
         </header>
 
         <main className="mt-4 flex-grow">
-          <p className="max-md:text-lg max-lg:text-3xl text-zinc-200 text-base">
+          <p className="font-bold max-md:text-lg max-lg:text-3xl text-white text-base">
             {conteudo}
           </p>
         </main>

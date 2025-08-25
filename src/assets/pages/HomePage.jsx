@@ -29,6 +29,7 @@ function HomePage() {
       name: 'Novas noticias',
       conteudo: 'Explore nossos simuladores para praticar cálculos e resolver problemas da engenharia civil. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam similique asperiores fuga tempore magni excepturi perferendi',
       image: '../../../public/imagens/imageEnsino.jpeg'
+
     },
   ]
 
@@ -92,8 +93,8 @@ function HomePage() {
         </div>
 
 
-         <div style={{ backgroundImage: `url(${imageEnsino})` }}
-      className='w-full bg-slate-600/70 shadow-2xl shadow-slate-900/25 h-[500px] flex flex-col items-center
+        <div style={{ backgroundImage: `url(${imageEnsino})` }}
+          className='w-full bg-slate-600/70 shadow-2xl shadow-slate-900/25 h-[500px] flex flex-col items-center
                 space-y-10 bg-center my-20'>
 
       <span className='w-full h-full bg-slate-900/40 flex flex-col items-center'>

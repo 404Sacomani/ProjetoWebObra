@@ -8,15 +8,15 @@ function Footer() {
     const sizeLogo = 120;
 
     return (
-        <footer className="w-full h-[300px] bg-slate-900 flex justify-between px-50 py-15 shadow-md shadow-slate-700">
-            <div className='flex flex-col items-center '>
+        <footer className="w-full h-[300px] bg-slate-900 flex justify-between pc-10 xl:px-50 py-15 shadow-md shadow-slate-700 max-lg:flex max-lg:flex-col max-lg:h-full">
+            <div className='flex flex-col items-center max-lg:text-center'>
                 <img src={imgLogo} alt="" width={sizeLogo} height={sizeLogo} />
                 <h1 className='text-3xl font-semibold text-white'>Obra Ativa</h1>
                 <p className='text-white opacity-60'>&copy; {new Date().getFullYear()} Obra Ativa</p>
                 <p className='text-white opacity-60'>Todos os direitos reservados.</p>
             </div>
 
-            <div className='w-[500px] space-y-6'>
+            <div className='w-[500px] space-y-6 max-lg:w-full max-lg:my-5'>
                 <h1 className='text-2xl text-white font-semibold text-center'>Informações</h1>
                 <p className='text-white text-2sm font-regular text-center'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo saepe natus sit! Fugit libero,
                     fugiat deserunt voluptatibus magni sed odio impedit esse veritatis at eius, ex adipisci
@@ -25,7 +25,7 @@ function Footer() {
 
             <div>
 
-                <ul className='space-y-2 appearance-none'>
+                <ul className='space-y-2 appearance-none max-lg:text-center max-lg:flex max-lg:flex-col max-lg:items-center'>
                     <li className='text-white font-semibold text-2xl mb-5'>Redes Sociais</li>
 
                     <li className='flex space-x-2 items-center'>

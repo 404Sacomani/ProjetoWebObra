@@ -2,27 +2,23 @@ import React, { useState, useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import setaE from '../../../public/imagens/seta_esquerda64.png';
 import setaD from '../../../public/imagens/seta_direita64.png';
-import img1 from '../../../public/imagens/img_cr_01.png';
-import ImgCr1 from '../../../public/imagens/img_cr_15.jpeg'
-import ImgCr2 from '../../../public/imagens/img_cr_17.png'
-import ImgCr3 from '../../../public/imagens/img_cr_14.jpeg'
 
 // 1. Defina os dados dos seus slides em um array
 const slides = [
     {
-        image: 'ImgCr1',
+        image: '../../../public/imagens/img_cr_15.jpeg',
         title: 'Artigos da Engenharia',
         text: 'Transformamos suas ideias em realidade com design e tecnologia de ponta. Transformamos suas ideias em realidade com design e tecnologia de ponta.',
         button: '/about',
     },
     {
-        image: 'ImgCr2',
+        image: '../../../public/imagens/img_cr_17.png',
         title: 'Explore Nossos Simuladores',
         text: 'Descubra ferramentas interativas para calcular e resolver problemas da engenharia civil. Aprenda na prática e amplie seus conhecimentos.',
         button: '/simuladores',
     },
     {
-        image: 'ImgCr3',
+        image: '../../../public/imagens/img_cr_14.jpeg',
         title: 'Acabamento de Qualidade Master',
         text: 'Detalhes que fazem a diferença, garantindo a excelência em cada metro quadrado.',
         button: '/service',

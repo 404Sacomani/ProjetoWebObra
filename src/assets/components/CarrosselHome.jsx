@@ -53,7 +53,7 @@ function CarrosselHome() {
 
     return (
         <div
-            style={{ backgroundImage: `url(${slides[currentIndex].image})` }}
+            style={backgroundImage: `url(${slides[currentIndex].image})`}
             className="relative h-[92svh] w-full bg-cover bg-center transition-all duration-1000 max-lg:h-[500px] max-lg:bg-bottom"
         >
             <button

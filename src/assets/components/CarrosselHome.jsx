@@ -16,14 +16,14 @@ const slides = [
         button: '/about',
     },
     {
-        image: 'ImgCr1',
+        image: 'ImgCr2',
         title: 'Explore Nossos Simuladores',
         text: 'Descubra ferramentas interativas para calcular e resolver problemas da engenharia civil. Aprenda na prática e amplie seus conhecimentos.',
         button: '/simuladores',
     },
     {
         image: 'ImgCr3',
-        title: 'Acabamento de Qualidade',
+        title: 'Acabamento de Qualidade Master',
         text: 'Detalhes que fazem a diferença, garantindo a excelência em cada metro quadrado.',
         button: '/service',
     },
@@ -53,7 +53,7 @@ function CarrosselHome() {
 
     return (
         <div
-            style={backgroundImage: `url(${slides[currentIndex].image})`}
+            style={{backgroundImage: `url(${slides[currentIndex].image})`}}
             className="relative h-[92svh] w-full bg-cover bg-center transition-all duration-1000 max-lg:h-[500px] max-lg:bg-bottom"
         >
             <button

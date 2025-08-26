@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import setaE from '../../../public/imagens/seta_esquerda64.png';
 import setaD from '../../../public/imagens/seta_direita64.png';
+import imgteste from '../../../public/imagens/img_cr_15.jpeg';
 
 // 1. Defina os dados dos seus slides em um array
 const slides = [
@@ -49,7 +50,7 @@ function CarrosselHome() {
 
     return (
         <div
-            style={{backgroundImage: `url(${slides[currentIndex].image})`}}
+            style={{backgroundImage: `url(${imgteste})`}}
             className="relative h-[92svh] w-full bg-cover bg-center transition-all duration-1000 max-lg:h-[500px] max-lg:bg-bottom"
         >
             <button

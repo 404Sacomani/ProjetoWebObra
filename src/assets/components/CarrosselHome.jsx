@@ -2,24 +2,24 @@ import React, { useState, useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import setaE from '../../../public/imagens/seta_esquerda64.png';
 import setaD from '../../../public/imagens/seta_direita64.png';
-import imgteste from '../../../public/imagens/img_cr_15.jpeg';
+import img2 from '../../../public/imagens/img_cr_15.jpeg';
+import img1 from '../../../public/imagens/img_cr_17.jpeg';
+import img3 from '../../../public/imagens/img_cr_14.jpeg';
 
 // 1. Defina os dados dos seus slides em um array
+const imgSlide = [img1, img2, img3];
 const slides = [
     {
-        image: "../../../public/imagens/img_cr_15.jpeg",
         title: 'Artigos da Engenharia',
         text: 'Transformamos suas ideias em realidade com design e tecnologia de ponta. Transformamos suas ideias em realidade com design e tecnologia de ponta.',
         button: '/about',
     },
     {
-        image: "../../../public/imagens/img_cr_17.png",
         title: 'Explore Nossos Simuladores',
         text: 'Descubra ferramentas interativas para calcular e resolver problemas da engenharia civil. Aprenda na prática e amplie seus conhecimentos.',
         button: '/simuladores',
     },
     {
-        image: "../../../public/imagens/img_cr_14.jpeg",
         title: 'Acabamento de Qualidade Master',
         text: 'Detalhes que fazem a diferença, garantindo a excelência em cada metro quadrado.',
         button: '/service',
@@ -50,7 +50,7 @@ function CarrosselHome() {
 
     return (
         <div
-            style={{backgroundImage: `url(${imgteste})`}}
+            style={{backgroundImage: `url(${imgSlide[currentIndex]})`}}
             className="relative h-[92svh] w-full bg-cover bg-center transition-all duration-1000 max-lg:h-[500px] max-lg:bg-bottom"
         >
             <button

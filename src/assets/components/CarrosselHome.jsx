@@ -2,8 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import setaE from '../../../public/imagens/seta_esquerda64.png';
 import setaD from '../../../public/imagens/seta_direita64.png';
-import img2 from '../../../public/imagens/img_cr_15.jpeg';
-import img1 from '../../../public/imagens/img_cr_17.jpeg';
+import img1 from '../../../public/imagens/img_cr_15.jpeg';
+import img2 from '../../../public/imagens/img_cr_17.png';
 import img3 from '../../../public/imagens/img_cr_14.jpeg';
 
 // 1. Defina os dados dos seus slides em um array

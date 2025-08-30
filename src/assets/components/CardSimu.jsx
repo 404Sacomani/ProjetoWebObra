@@ -1,19 +1,25 @@
 
-function CardSimu() {
+function CardSimu({ titulo, desc }) {
     return (
-        <div className="flex space-x-10 border-4 border-amber-400">
-            <div className="w-100 h-100 bg-red-700 rounded-2xl">
-
-            </div>
-            <div className="p-15 ">
-                <h1 className="text-3xl text-amber-400 font-bold">
-                    <a href="">Ferramentas de Cálculo</a>
-                </h1>
-                <p className="w-150">
-                    Explore nossos simuladores interativos que facilitam a prática de cálculos e resolução de problemas comuns na engenharia civil, promovendo um aprendizado dinâmico e eficaz para estudantes e profissionais.
-                </p>
-            </div>
-        </div>
+        <div 
+  className='w-100 m-3 md:m-7 p-6 shadow-lg shadow-zinc-600/60 border-2 border-amber-400 rounded-2xl 
+             flex flex-col items-center justify-between space-y-5 lg:space-y-8 group 
+             transition-all duration-300 ease-in-out hover:shadow-2xl hover:scale-105'
+>
+  <h1 className='text-3xl lg:text-4xl font-black text-amber-500 mt-2 text-center uppercase tracking-wide'>
+    {titulo}
+  </h1>
+  <p className='mx-4 lg:mx-8 text-base md:text-lg font-medium text-white text-center flex-grow'>
+    {desc}
+  </p>
+  <a
+    className='w-full py-3 mt-4 text-center rounded-full bg-amber-400 text-white 
+               font-bold uppercase tracking-wider transition-colors duration-300
+               hover:bg-amber-500'
+  >
+    Acessar link
+  </a>
+</div>
     )
 }
 export default CardSimu

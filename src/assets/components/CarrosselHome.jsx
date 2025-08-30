@@ -55,7 +55,7 @@ function CarrosselHome() {
         >
             <button
                 onClick={goToPrevious}
-                className="absolute left-0 top-1/2 -translate-y-1/2 z-10 ml-5 h-40 w-12 flex items-center justify-center bg-black/20 rounded-xl
+                className="absolute left-0 top-1/2 -translate-y-1/2 z-10 ml-5 h-60 w-20 flex items-center justify-center bg-black/20 rounded-xl
                    hover:bg-black/40 transition-opacity duration-300 max-lg:h-30 max-lg:w-10 max-lg:top-6/7"
             >
                 <img src={setaE} alt="Anterior" className="w-6" />
@@ -89,7 +89,7 @@ function CarrosselHome() {
 
             <button
                 onClick={goToNext}
-                className="absolute right-0 top-1/2 -translate-y-1/2 z-10 mr-5 h-40 w-12 flex items-center justify-center bg-black/20 rounded-xl
+                className="absolute right-0 top-1/2 -translate-y-1/2 z-10 mr-5 h-60 w-20 flex items-center justify-center bg-black/20 rounded-xl
                    hover:bg-black/40 transition-opacity duration-300 max-lg:h-30 max-lg:w-10 max-lg:top-6/7"
             >
                 <img src={setaD} alt="Próximo" className="w-6" />

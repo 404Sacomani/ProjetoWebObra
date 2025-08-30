@@ -1,52 +1,57 @@
 import React from 'react';
 
-function CardHome({ name, conteudo, image, size = 'default' }) {
-  
-  const sizeStyles = {
+function CardHome({ name, conteudo, image, alt, size = 'default' }) {
+  const sizeClasses = {
     small: 'w-64 h-80',
-    default: 'w-full h-100 md:h-150 xl:w-80 xl:h-100', 
-    large: 'w-full h-100 md:h-150 xl:w-175 xl:h-210', 
+    default: 'w-full md:w-80 lg:h-96',
+    large: 'w-full md:w-[600px] h-100 md:h-[500px] lg:h-[840px]',
   };
+
+  const headerClasses = size === 'large' 
+    ? 'w-full h-40 bg-white/85 flex flex-col items-center justify-center space-y-3 shadow-xl shadow-black/30'
+    : 'w-full h-20 bg-white/85 flex flex-col items-center justify-center shadow-xl shadow-black/30';
 
   return (
     <div
       className={`
-        my-5
-        ${sizeStyles[size]} 
-        relative flex flex-col justify-between
-        bg-zinc-800 rounded-xl overflow-hidden shadow-lg 
-        border border-zinc-700 group
+        ${sizeClasses[size] || sizeClasses.default}
+        my-5 relative flex flex-col justify-between
+        bg-zinc-800 rounded-lg overflow-hidden shadow-xl
+        border-2 border-amber-400 group
         transition-all duration-500 ease-in-out
-        hover:shadow-2xl hover:shadow-amber-500/20 hover:scale-105
+        hover:shadow-2xl hover:shadow-amber-500/30 hover:scale-105
+        cursor-pointer
       `}
     >
-      <div 
+      <div
         style={{ backgroundImage: `url(${image})` }}
         className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+        aria-label={alt}
       ></div>
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/55 to-black/35"></div>
 
-      <div className="relative z-10 flex flex-col h-full p-6 text-white">
-        <header>
-          <h1 className="text-amber-400 font-extrabold text-2xl md:text-4xl lg:text-2xl uppercase tracking-wider drop-shadow-md max-lg:text-center">
-            {name}
-          </h1>
-        </header>
+      <header className={`relative z-10 ${headerClasses}`}>
+        <h1 className="text-amber-500 font-extrabold text-2xl lg:text-3xl tracking-wide drop-shadow-md text-center">
+          {name}
+        </h1>
+        {size === 'large' && (
+          <h2 className="text-red-800 font-bold text-sm lg:text-base tracking-widest text-center mt-1">
+            Última Publicação
+          </h2>
+        )}
+      </header>
+      
+      <main className="relative z-10 p-6 flex flex-col justify-end text-white flex-grow">
+        <p className="font-semibold text-base lg:text-lg">
+          {conteudo}
+        </p>
+      </main>
 
-        <main className="mt-4 flex-grow">
-          <p className="font-bold max-md:text-lg max-lg:text-3xl text-white text-base">
-            {conteudo}
-          </p>
-        </main>
-
-        <footer className="mt-4">
-          <button className="w-full h-12 bg-amber-400 text-amber-50 font-bold uppercase rounded-lg
-                           transition-all duration-300
-                           hover:bg-amber-500 hover:scale-105">
-            Saiba mais
-          </button>
-        </footer>
-      </div>
+      <footer className="relative z-10 w-full">
+        <a className="block w-full py-4 text-center bg-amber-400 text-amber-50 font-semibold uppercase transition-colors duration-200 hover:bg-amber-500">
+          Leia mais
+        </a>
+      </footer>
     </div>
   );
 }

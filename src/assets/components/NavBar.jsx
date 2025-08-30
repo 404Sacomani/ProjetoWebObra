@@ -27,7 +27,7 @@ function NavBar() {
                 <NavLink to='/' className='flex flex-shrink-0 items-center space-x-3' onClick={handleLinkClick}>
                     <Logo imgW={logoSize} imgH={logoSize} />
                     <h1 className='max-lg:hidden text-3xl font-semibold transition-transform hover:scale-105 max-sm:absolute left-1/3'>
-                        Obra Ativa
+                        ObrAtiva
                     </h1>
                 </NavLink>
 

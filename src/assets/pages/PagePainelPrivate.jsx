@@ -136,7 +136,7 @@ function CriarArtigo() {
                 <div className="mb-4">
                     <label htmlFor="conteudo" className="block text-gray-700 font-bold mb-2">Conteúdo</label>
                     <Editor
-                        apiKey='6hg0yj4sbtgpux6deub3fz2r49xxz3gqcu58o0ohii3pn2fh'
+                        apiKey={process.env.API_TYNI}
                         onInit={(_evt, editor) => editorRef.current = editor}
                         initialValue=""
                         init={{

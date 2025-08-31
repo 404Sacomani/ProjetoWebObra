@@ -14,7 +14,7 @@ function CriarArtigo() {
         titulo: '',
         subtitulo: '',
         resumo: '',
-        conteudo: '',
+        conteudo: 'teste',
         tags: '',
         slugs: '',
         status: 'rascunho',

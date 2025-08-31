@@ -10,8 +10,8 @@ function NavBar() {
 
     const navbarData = [
         { name: 'Home', path: "/" },
-        { name: 'Blog', path: "/service" },
-        { name: 'Artigos', path: "/about" },
+        { name: 'Blog', path: "/artigos" },
+        { name: 'Loja', path: "/about" },
         { name: 'Simuladores', path: "/simuladores" }
     ];
 
@@ -26,7 +26,7 @@ function NavBar() {
 
                 <NavLink to='/' className='flex flex-shrink-0 items-center space-x-3' onClick={handleLinkClick}>
                     <Logo imgW={logoSize} imgH={logoSize} />
-                    <h1 className='max-lg:hidden text-3xl font-semibold transition-transform hover:scale-105 max-sm:absolute left-1/3'>
+                    <h1 className='max-lg:hidden text-3xl font-semibold hover:-translate-y-0.5 transition-all max-sm:absolute left-1/3'>
                         ObrAtiva
                     </h1>
                 </NavLink>
@@ -38,7 +38,7 @@ function NavBar() {
                             to={link.path}
                             className={({ isActive }) =>
                                 `font-bold transition-all duration-300
-                                 ${isActive ? "text-amber-400 border-b-2 border-amber-400" : "text-amber-50 hover:text-slate-500 hover:scale-105"}`
+                                 ${isActive ? "text-amber-400 border-b-2 border-amber-400" : "text-slate-200 hover:text-slate-300 hover:-translate-y-0.5 transition-all"}`
                             }
                         >
                             {link.name}

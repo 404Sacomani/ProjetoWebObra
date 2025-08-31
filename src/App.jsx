@@ -3,10 +3,13 @@ import NavBar from '../src/assets/components/NavBar'
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from '../src/assets/pages/HomePage'
-import ServicePage from '../src/assets/pages/ServicePage'
+import ArtigosPage from './assets/pages/ArtigosPage'
 import AboutPage from '../src/assets/pages/AboutPage'
 import SimuladoresPage from '../src/assets/pages/SimuladoresPage'
 import Footer from '../src/assets/components/Footer'
+import ArtigoPageFind from './assets/pages/ArtigosPageFind';
+import UserPage from './assets/pages/UserPage'
+import PagePainelControle from './assets/pages/PagePainelPrivate'
 
 import './App.css'
 
@@ -14,13 +17,16 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-     <BrowserRouter>
-      <NavBar/>
+    <BrowserRouter>
+      <NavBar />
 
       <main>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/service" element={<ServicePage />} />
+          <Route path="/admin/login" element={<UserPage/>}/>
+          <Route path="/admin/painel-controle" element={<PagePainelControle/>}/>
+          <Route path="/artigos/:slug" element={<ArtigoPageFind />} />
+          <Route path="/artigos" element={<ArtigosPage />} />
           <Route path="/simuladores" element={<SimuladoresPage />} />
           <Route path="/about" element={<AboutPage />} />
         </Routes>

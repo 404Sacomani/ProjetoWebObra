@@ -3,10 +3,10 @@ import instaIcon from '../../../public/imagens/instaicon_y.png'
 import whattsIcon from '../../../public/imagens/whattsicon_y.png'
 
 function BarSocial() {
-    const sizeIcon = 20;
+    const sizeIcon = 25;
 
     return (
-        <div className='w-full h-10 bg-slate-900 flex items-center justify-center shadow-md shadow-slate-700/20'>
+        <div className='w-full h-15 bg-slate-900 flex items-center justify-center shadow-md shadow-slate-700/20'>
             <div className='flex space-x-15 items-center justify-center p-2'>
                 <a href="https://www.instagram.com/fundamentosdaengenharia/#" target="_blank"
                     className='hover:scale-120 duration-500' >

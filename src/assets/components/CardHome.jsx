@@ -1,58 +1,37 @@
 import React from 'react';
 
-function CardHome({ name, conteudo, image, alt, size = 'default' }) {
-  const sizeClasses = {
-    small: 'w-64 h-80',
-    default: 'w-full md:w-80 lg:h-96',
-    large: 'w-full md:w-[600px] h-100 md:h-[500px] lg:h-[840px]',
-  };
+function CardHome({ title, slug, desc, image, alt, size = 'default' }) {
 
-  const headerClasses = size === 'large' 
-    ? 'w-full h-40 bg-white/85 flex flex-col items-center justify-center space-y-3 shadow-xl shadow-black/30'
-    : 'w-full h-20 bg-white/85 flex flex-col items-center justify-center shadow-xl shadow-black/30';
+  const headerClasses = size === 'large'
+    ? 'lg:col-span-2 bg-slate-900 rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row'
+    : 'bg-slate-900 rounded-lg shadow-lg overflow-hidden';
 
   return (
-    <div
-      className={`
-        ${sizeClasses[size] || sizeClasses.default}
-        my-5 relative flex flex-col justify-between
-        bg-zinc-800 rounded-lg overflow-hidden shadow-xl
-        border-2 border-amber-400 group
-        transition-all duration-500 ease-in-out
-        hover:shadow-2xl hover:shadow-amber-500/30 hover:scale-105
-        cursor-pointer
-      `}
-    >
-      <div
-        style={{ backgroundImage: `url(${image})` }}
-        className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
-        aria-label={alt}
-      ></div>
-      <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/55 to-black/35"></div>
-
-      <header className={`relative z-10 ${headerClasses}`}>
-        <h1 className="text-amber-500 font-extrabold text-2xl lg:text-3xl tracking-wide drop-shadow-md text-center">
-          {name}
-        </h1>
-        {size === 'large' && (
-          <h2 className="text-red-800 font-bold text-sm lg:text-base tracking-widest text-center mt-1">
-            Última Publicação
-          </h2>
-        )}
-      </header>
-      
-      <main className="relative z-10 p-6 flex flex-col justify-end text-white flex-grow">
-        <p className="font-semibold text-base lg:text-lg">
-          {conteudo}
-        </p>
-      </main>
-
-      <footer className="relative z-10 w-full">
-        <a className="block w-full py-4 text-center bg-amber-400 text-amber-50 font-semibold uppercase transition-colors duration-200 hover:bg-amber-500">
-          Leia mais
-        </a>
-      </footer>
-    </div>
+    <>
+      <div className={`hover:-translate-y-2 transition-all hover:shadow-lg hover:shadow-slate-500/20 duration-400 ${headerClasses}`}>
+        {
+          size === 'large' ? (
+            <div className="flex flex-col md:flex-row">
+              <img alt={alt} className="w-full md:w-1/2 h-64 md:h-auto object-cover" src={image} />
+              <div className="p-6 flex flex-col justify-between">
+                <div>
+                  <span className="text-sm text-amber-400 font-semibold">MAIS RECENTE</span>
+                  <h3 className="text-2xl font-bold text-slate-200 mt-2 mb-2">{title}</h3>
+                  <p className="text-slate-400 mb-4">{desc}</p>
+                </div>
+                <a className="bg-amber-500 hover:bg-amber-600 text-slate-200 font-bold py-2 px-4 rounded-md self-start" href={`/artigos/${slug}`}>Leia Mais</a>
+              </div>
+            </div>
+          ) : (<>
+            <img alt={alt} className="w-full h-40 object-cover" src={image} />
+            <div className="p-4">
+              <h4 className="font-bold text-lg text-slate-200">{title}</h4>
+              <a className="text-amber-400 hover:text-amber-500 font-semibold text-sm mt-2 inline-block" href={`/artigos/${slug}`}>Leia Mais</a>
+            </div >
+          </>)
+        }
+      </div>
+    </>
   );
 }
 

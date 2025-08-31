@@ -1,25 +1,25 @@
 
-function CardSimu({ titulo, desc }) {
-    return (
-        <div 
-  className='w-100 m-3 md:m-7 p-6 shadow-lg shadow-zinc-600/60 border-2 border-amber-400 rounded-2xl 
-             flex flex-col items-center justify-between space-y-5 lg:space-y-8 group 
-             transition-all duration-300 ease-in-out hover:shadow-2xl hover:scale-105'
->
-  <h1 className='text-3xl lg:text-4xl font-black text-amber-500 mt-2 text-center uppercase tracking-wide'>
-    {titulo}
-  </h1>
-  <p className='mx-4 lg:mx-8 text-base md:text-lg font-medium text-white text-center flex-grow'>
-    {desc}
-  </p>
-  <a
-    className='w-full py-3 mt-4 text-center rounded-full bg-amber-400 text-white 
-               font-bold uppercase tracking-wider transition-colors duration-300
-               hover:bg-amber-500'
-  >
-    Acessar link
-  </a>
-</div>
-    )
+function CardSimu({ titulo, desc, stick }) {
+
+  const valorStick = (() => {
+    switch (stick) {
+      case 0:
+        return 'calculate';
+      case 1:
+        return 'article';
+      case 2:
+        return 'menu_book';
+      default:
+        return 'calculate'; // Adicione um caso padrão
+    }
+  })();
+  return (
+    <div className="bg-slate-900 p-8 rounded-lg shadow-lg hover:shadow-slate-500/20 transform hover:-translate-y-2 transition-all duration-300">
+      <span className="material-icons text-amber-400 text-7xl mb-4">{valorStick}</span>
+      <h3 className="text-4xl font-bold mb-2 text-slate-200">{titulo}</h3>
+      <p className="text-slate-400">C{desc}</p>
+      <a className="mt-4 inline-block text-amber-400 hover:text-amber-500 font-semibold" href="#">Acessar agora <span className="material-icons align-middle">arrow_forward</span></a>
+    </div>
+  )
 }
 export default CardSimu

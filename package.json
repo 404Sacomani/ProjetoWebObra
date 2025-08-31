@@ -11,7 +11,9 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.12",
+    "@tinymce/tinymce-react": "^6.3.0",
     "axios": "^1.11.0",
+    "htmlparser2": "^10.0.0",
     "lucide-react": "^0.541.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",

@@ -1,0 +1,13 @@
+.teste p img{
+    height: 550px;
+    width: 100%;
+}
+
+.teste p span {
+    color:red !important;
+    font-size: x-large;
+}
+
+.teste h2 span {
+    font-size: xx-large;
+}

@@ -8,6 +8,7 @@ import { Editor } from '@tinymce/tinymce-react';
 function CriarArtigo() {
     const navigate = useNavigate();
     const editorRef = useRef(null);
+    const API_KEY = process.env.API_TYNI
 
     const [formData, setFormData] = useState({
         titulo: '',
@@ -136,7 +137,7 @@ function CriarArtigo() {
                 <div className="mb-4">
                     <label htmlFor="conteudo" className="block text-gray-700 font-bold mb-2">Conteúdo</label>
                     <Editor
-                        apiKey={process.env.API_TYNI}
+                        apiKey={API_KEY}
                         onInit={(_evt, editor) => editorRef.current = editor}
                         initialValue=""
                         init={{

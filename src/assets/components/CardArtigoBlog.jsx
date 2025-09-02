@@ -5,7 +5,7 @@ import dataAtualForm from './ComponentDate';
 const CardArtigoBlog = ({ artigo }) => {
   return (
     <div className="bg-slate-900 rounded-lg overflow-hidden shadow-lg group transition-transform duration-300 hover:scale-105">
-      <a href={`/artigos/${artigo.slugs}`}>
+      <a href={`/blog/${artigo.slugs}`}>
         <img
           className="aspect-video w-full rounded-t-lg object-cover"
           src={artigo.imagemCapa}

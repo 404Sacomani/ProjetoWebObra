@@ -16,7 +16,7 @@ function ArtigoPageFind() {
     useEffect(() => {
         async function fetchArtigo() {
             try {
-                const response = await api.get(`/artigos/${slug}`)
+                const response = await api.get(`/blog/${slug}`)
 
                 setArtigo(response.data)
             } catch (error) {
@@ -41,8 +41,8 @@ function ArtigoPageFind() {
             <section className="bg-slate-800">
                 <header className="w-[60%] mx-auto flex flex-col space-y-5 py-20">
                     <div>
-                        <a href="/artigos" className="text-slate-500 text-2sm hover:text-slate-400 duration-400">Artigos/ </a>
-                        <a href={`/artigos/${artigo.slugs}`} className="text-slate-300 hover:text-slate-200 duration-100">{artigo.titulo}</a>
+                        <a href="/blog" className="text-slate-500 text-2sm hover:text-slate-400 duration-400">Artigos/ </a>
+                        <a href={`/blog/${artigo.slugs}`} className="text-slate-300 hover:text-slate-200 duration-100">{artigo.titulo}</a>
                     </div>
                     <h1 className="text-6xl text-slate-200 font-serif "
                     >{artigo.titulo}</h1>

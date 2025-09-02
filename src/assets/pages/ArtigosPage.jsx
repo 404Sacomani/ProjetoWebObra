@@ -19,7 +19,7 @@ function ArtigosPage() {
       try {
         setLoading(true);
         const startIndex = (currentPage - 1) * ARTICLES_PER_PAGE;
-        const response = await api.get(`/artigos?_start=${startIndex}&_limit=${ARTICLES_PER_PAGE}`);
+        const response = await api.get(`/blog?_start=${startIndex}&_limit=${ARTICLES_PER_PAGE}`);
         
         if (!response.data) {
           throw new Error('Falha ao carregar o conteúdo.');

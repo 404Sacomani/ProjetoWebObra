@@ -22,7 +22,7 @@ const slides = [
     {
         title: 'Expanda seus horizontes.',
         text: 'Descubra a seleção de livros essenciais para a sua carreira. Encontre o conhecimento que vai te guiar em cada passo da sua jornada profissional.',
-        button: '/service',
+        button: '/blog',
     },
 ];
 
@@ -64,16 +64,16 @@ function CarrosselHome() {
 
             <div
                 key={currentIndex}
-                className="h-full flex flex-col p-4 animate-fade-in-up space-y-6 items-center bg-slate-800/50"
+                className="h-full  flex flex-col p-4 animate-fade-in-up space-y-6 items-center bg-slate-800/50"
             >
-                <h1 className="absolute top-1/5 text-2xl md:text-6xl lg:text-7xl font-semibold drop-shadow-lg text-amber-400
+                <h1 className="absolute w-[90%] xl:w-[80%] top-1/8 xl:top-1/5 text-3xl md:text-5xl lg:text-7xl font-semibold drop-shadow-lg text-amber-400
                  uppercase text-center">
                     {slides[currentIndex].title}
                 </h1>
-                <p className="absolute text-center top-2/6 mt-5 xl:top-3/6 max-w-[90%] text-lg md:text-2lg lg:text-3xl drop-shadow-md text-slate-200 font-bold">
+                <p className="absolute w-[95%] xl:w-[80%] text-center top-2/6 mt-8 xl:top-3/6 max-w-[90%] text-[1rem] md:text-xl lg:text-3xl drop-shadow-md text-slate-300 font-bold">
                     {slides[currentIndex].text}
                 </p>
-                <button className='absolute top-4/5 w-90 h-20 mr-5 font-semibold border-4 border-amber-400 overflow-hidden hover:bg-amber-400 duration-400
+                <button className='absolute top-4/5 max-lg:-mt-2 md:top-4/6 md:mt-5 xl:mt-15 w-90 h-20 mr-5 font-semibold border-4 border-amber-400 overflow-hidden hover:bg-amber-400 duration-400
                 group rounded-full cursor-pointer max-md:w-45 max-md:h-10 max-md:2/3 max-lg:w-60 max-lg:h-15 max-lg:3/5'
                 >
                     <span className='absolute inset-0 bg-amber-400 translate-x-[-100%] 

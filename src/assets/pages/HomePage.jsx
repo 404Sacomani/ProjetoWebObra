@@ -86,7 +86,7 @@ function HomePage() {
   useEffect(() => {
     async function fetchArtigos() {
       try {
-        const dataArtigo = await api.get('/homeArtigo');
+        const dataArtigo = await api.get('/homeBlog');
 
         if (!dataArtigo.data) {
           throw new Error('Falha ao carregar conteúdo.');
@@ -128,6 +128,9 @@ function HomePage() {
             <h1 className="text-xl md:text-4xl lg:text-5xl font-black uppercase text-slate-200 drop-shadow-lg tracking-wider">
               simuladores em Destaque
             </h1>
+            <p className='text-red-600 text-xl'>
+              ( não implementado )
+            </p>
             <div className="w-24 h-1 bg-white mt-4 rounded-full"></div>
           </div>
           {loading ? (
@@ -224,6 +227,9 @@ function HomePage() {
                       transition-all duration-500 bg-center bg-no-repeat bg-cover'
       >
         <div className='w-full h-full flex flex-col items-center justify-center text-white p-4 md:p-8'>
+          <p className='text-red-600 text-xl'>
+              ( não implementado )
+            </p>
           <h3 className='text-2xl md:text-4xl lg:text-6xl font-extrabold text-slate-200 text-center mb-4 drop-shadow-md'>
             Procurando algo para ler?
           </h3>
@@ -237,6 +243,7 @@ function HomePage() {
           >
             Buscar um livro
           </a>
+          
         </div>
       </div>
       <SlideLivros

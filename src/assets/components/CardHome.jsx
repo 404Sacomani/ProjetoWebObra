@@ -19,14 +19,14 @@ function CardHome({ title, slug, desc, image, alt, size = 'default' }) {
                   <h3 className="text-2xl font-bold text-slate-200 mt-2 mb-2">{title}</h3>
                   <p className="text-slate-400 mb-4">{desc}</p>
                 </div>
-                <a className="bg-amber-500 hover:bg-amber-600 text-slate-200 font-bold py-2 px-4 rounded-md self-start" href={`/artigos/${slug}`}>Leia Mais</a>
+                <a className="bg-amber-500 hover:bg-amber-600 text-slate-200 font-bold py-2 px-4 rounded-md self-start" href={`/blog/${slug}`}>Leia Mais</a>
               </div>
             </div>
           ) : (<>
             <img alt={alt} className="w-full h-40 object-cover" src={image} />
             <div className="p-4">
               <h4 className="font-bold text-lg text-slate-200">{title}</h4>
-              <a className="text-amber-400 hover:text-amber-500 font-semibold text-sm mt-2 inline-block" href={`/artigos/${slug}`}>Leia Mais</a>
+              <a className="text-amber-400 hover:text-amber-500 font-semibold text-sm mt-2 inline-block" href={`/blog/${slug}`}>Leia Mais</a>
             </div >
           </>)
         }

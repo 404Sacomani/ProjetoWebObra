@@ -10,7 +10,7 @@ function NavBar() {
 
     const navbarData = [
         { name: 'Home', path: "/" },
-        { name: 'Blog', path: "/artigos" },
+        { name: 'Blog', path: "/blog" },
         { name: 'Loja', path: "/about" },
         { name: 'Simuladores', path: "/simuladores" }
     ];

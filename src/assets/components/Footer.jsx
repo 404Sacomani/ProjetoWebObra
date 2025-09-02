@@ -8,7 +8,7 @@ function Footer() {
     const sizeLogo = 120;
 
     return (
-        <footer className="w-full h-full bg-slate-900  shadow-md shadow-slate-700 py-15">
+        <footer className="w-full h-full bg-slate-900 py-15">
             <div className='flex justify-between xl:px-50  max-lg:flex max-lg:flex-col max-lg:h-full'>
                 <div className='flex flex-col items-center max-lg:text-center'>
                 <img src={imgLogo} alt="" width={sizeLogo} height={sizeLogo} />

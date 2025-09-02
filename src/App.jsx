@@ -25,8 +25,8 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/admin/login" element={<UserPage/>}/>
           <Route path="/admin/painel-controle" element={<PagePainelControle/>}/>
-          <Route path="/artigos/:slug" element={<ArtigoPageFind />} />
-          <Route path="/artigos" element={<ArtigosPage />} />
+          <Route path="/blog/:slug" element={<ArtigoPageFind />} />
+          <Route path="/blog" element={<ArtigosPage />} />
           <Route path="/simuladores" element={<SimuladoresPage />} />
           <Route path="/about" element={<AboutPage />} />
         </Routes>

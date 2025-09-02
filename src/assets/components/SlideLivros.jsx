@@ -30,6 +30,9 @@ function SlideLivros({ livrosHome }) {
                     <h1 className="text-xl md:text-2xl lg:text-4xl font-black uppercase text-slate-200 drop-shadow-lg tracking-wider">
                         Últimos adicionados
                     </h1>
+                    <p className='text-red-600 text-xl'>
+                        ( não implementado )
+                    </p>
                     <div className="w-24 h-1 bg-white mt-4 rounded-full"></div>
                 </div>
 

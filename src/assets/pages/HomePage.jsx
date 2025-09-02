@@ -102,12 +102,20 @@ function HomePage() {
     fetchArtigos();
   }, []);
 
-  if (error) {
+  if (loading) {
     return (
-      <div className='w-full min-h-screen bg-slate-900 flex flex-col items-center justify-center p-8 text-amber-400 font-semibold text-center'>
-        <h1 className='text-3xl md:text-5xl mb-6'>Erro ao carregar o conteúdo!</h1>
-        <p className='text-xl md:text-2xl mb-8'>Por favor, tente novamente mais tarde.</p>
+      <div className="bg-slate-800 py-20 min-h-screen flex items-center justify-center text-amber-400">
         <LoadingSpin />
+      </div>
+    );
+  }
+
+  if (error || !artigos) {
+    return (
+      <div className="bg-slate-800 py-20 min-h-screen flex flex-col items-center justify-center text-red-600">
+        <h1 className="text-3xl text-center">Erro: {error}</h1>
+        <p className="mt-4 text-center text-slate-400 mb-5">Não foi possível carregar os artigos.</p>
+        <LoadingSpin/>
       </div>
     );
   }

@@ -28,14 +28,24 @@ function ArtigoPageFind() {
         fetchArtigo()
     }, [slug])
     if (loading) {
-        return <LoadingSpin />;
+        return (
+            <div className="bg-slate-800 py-20 min-h-screen flex items-center justify-center text-amber-400">
+                <LoadingSpin />
+            </div>
+        );
     }
 
     if (error || !artigo) {
-        return <div>Erro: {error || 'Artigo não encontrado.'}</div>;
+        return (
+            <div className="bg-slate-800 py-20 min-h-screen flex flex-col items-center justify-center text-red-600">
+                <h1 className="text-3xl text-center">Erro: {error}</h1>
+                <p className="mt-4 text-center text-slate-400 mb-5">Não foi possível carregar os artigos.</p>
+                <LoadingSpin />
+            </div>
+        );
     }
 
-    const htmlTextTyni =  {__html: artigo.conteudo}
+    const htmlTextTyni = { __html: artigo.conteudo }
     return (
         <>
             <section className="bg-slate-800">
@@ -53,13 +63,13 @@ function ArtigoPageFind() {
                     >{artigo.subtitulo}</p>
                 </header>
                 <main className="w-[60%] mx-auto flex flex-col pb-20">
-                    <div 
+                    <div
                         dangerouslySetInnerHTML={htmlTextTyni}
                         className="prose teste"
                     >
-                </div>
-            </main>
-        </section >
+                    </div>
+                </main>
+            </section >
         </>
     )
 }
